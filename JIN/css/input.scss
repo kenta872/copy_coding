@@ -1,0 +1,821 @@
+$page-width: 1200px;
+$font-weight: 100;
+$set-prefix:("","-moz-","-webkit-");
+$footer-backcolor: #0d0015;
+$theme-green: #9ACC1E;
+
+body {
+  font-family: 'arial';
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+
+
+// ヘッダー
+header {
+  max-width: $page-width;
+  margin: 0 auto;
+  ul {
+    display: flex;
+    margin-bottom: 40px;
+    padding: 0;
+    justify-content: center;
+    li {
+      margin: 0 10px;
+      a {
+        position: relative;
+        padding: 0 18px;
+        color: black;
+        font-size: 14px;
+        &:after {
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          content: '';
+          width: 100%;
+          height: 2px;
+          background: #333;
+          opacity: 0;
+          @each $prefix in $set-prefix {
+            #{$prefix + 'transition'}: .3s;
+          }
+        }
+        &:hover::after {
+          bottom: -6px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+// ヘッダータイトル
+.pageTitle {
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  margin: 60px 0;
+  span {
+    color: $theme-green;
+  }
+  h1 {
+    font-weight: $font-weight;
+    letter-spacing: 0.15em;
+  }
+}
+
+
+
+
+// メイン
+
+main {
+  max-width: $page-width;
+  display: flex;
+  margin: 0 auto;
+}
+
+.main-article {
+  width: 66.6%;
+  display: flex;
+  flex-wrap: wrap;
+  article {
+    display: inline-block;
+    position: relative;
+    width: 46%;
+    margin: 0 0 20px 3%;
+
+
+    a {
+      display: block;
+      height: 100%;
+      color: black;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+      @each $prefix in $set-prefix {
+        #{$prefix + 'transition'}: all .4s;
+      }
+      border-radius: 2px;
+      overflow: hidden;
+
+      &:hover {
+        @each $prefix in $set-prefix {
+          #{$prefix + 'transform'}: translateY(-3px);
+        }
+        @each $prefix in $set-prefix {
+          #{$prefix + 'transition'}: .4s;
+        }
+        box-shadow: 0 3px 18px 3px rgba(0, 0, 0, 0.08);
+      }
+    }
+    img {
+      width: 100%;
+    }
+    h2 {
+      font-weight: 600 !important;
+      line-height: 2;
+      letter-spacing: 0.15em;
+      margin: 10px 20px 25px 20px;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+    span {
+      position: absolute;
+      text-align: right;
+      width: 90%;
+      right: 13px;
+      bottom: 0;
+      padding: 10px 0;
+      color: #888;
+      font-size: 0.75rem;
+      letter-spacing: 0.07em;
+    }
+    p {
+      padding: 5px 10px;
+      border-radius: 20px;
+      background-color: $theme-green;
+      color: white;
+      position: absolute;
+      top: 0;
+      left: 13px;
+      font-size: 11px;
+    }
+  }
+  ul {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    margin: 30px auto;
+    li {
+      display: inline-block;
+      margin: 0 5px;
+      a {
+        display: inline-block;
+        padding: 12px 16px;
+        background-color: white;
+        border-radius: 50%;
+        color: gray;
+        font-size:13px;
+        @each $prefix in $set-prefix {
+          #{$prefix + 'transition'}: all .3s;
+        }
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+        &:hover {
+          @each $prefix in $set-prefix {
+            #{$prefix + 'transform'}: translateY(-5px);
+          }
+          box-shadow: 0 3px 18px 3px rgba(0, 0, 0, 0.08);
+          background-color:$footer-backcolor;
+          color: white;
+          opacity:0.5;
+        }
+      }
+    }
+  }
+}
+
+
+.main-option {
+  width: 33.3%;
+}
+
+.option-part {
+  width: 89%;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+}
+.download {
+  h3 {
+    margin: 0;
+    padding: 10px 0;
+    background-color: black;
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-align: center;
+    color: white;
+  }
+  img {
+    display: block;
+    margin: 20px auto;
+    width: 87%;
+  }
+  p {
+    display: block;
+    width:87%;
+    margin: 0 auto;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+  }
+  a {
+    padding: 10px 40px;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    width: 53%;
+    background-color: #e22255;
+    letter-spacing: 2px;
+    display: block;
+    margin: 20px auto;
+    border: 3px double #fff;
+    @each $prefix in $set-prefix {
+      #{$prefix + 'transition'}: all .3s;
+    }
+    &:hover {
+      @each $prefix in $set-prefix {
+        #{$prefix + 'transition'}: .3s;
+      }
+      opacity: 0.7;
+    }
+  }
+}
+
+
+.sns {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 38px;
+    margin-bottom: 11px;
+    width: 110px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+  }
+  span,p {
+    display: block;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.detail {
+  a {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 26px;
+    width: 39%;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 1px;
+    background-color: #aaa;
+    border: 3px double #fff;
+    padding: 7px 0;
+    border-radius: 30px;
+    @each $prefix in $set-prefix {
+      #{$prefix + 'transition'}: all .3s;
+    }
+    &:hover {
+      @each $prefix in $set-prefix {
+        #{$prefix + 'transition'}: .3s;
+      }
+      opacity: 0.8;
+    }
+  }
+}
+.myname {
+  span {
+    margin: 6px auto;
+    color: rgba(0, 0, 0, 0.35);;
+    font-size: 10px;
+  }
+}
+
+.snstext {
+  display: block;
+  margin-top: 27px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 78%;
+  p {
+    text-align: left;
+    font-size: 13px;
+  }
+}
+
+.snsicons {
+  background-color: #9acc1e!important;
+  color: white;
+  padding: 12px 0;
+  span {
+    padding: 6px 0;
+    font-size: 13px;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    li {
+      width:42px;
+      height:32px;
+      a {
+        border-radius: 2px;
+        display: block;
+        line-height: 32px;
+        margin: 0 4px;
+        width: 34px;
+        height:32px;
+        background: rgba(255, 255, 255, 0.18);
+        font-size: 17px;
+        color: white;
+        overflow: hidden;
+        @each $prefix in $set-prefix {
+          #{$prefix + 'transition'}: all .3s;
+        }
+        &:hover {
+          @each $prefix in $set-prefix {
+            #{$prefix + 'transition'}: .3s;
+          }
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+.recent {
+  padding-bottom: 20px;
+  h3 {
+    padding: 0;
+    width: 78%;
+    margin-top:33px;
+    margin-bottom:27px;
+    margin-right:auto;
+    margin-left:auto;
+    font-weight: 100;
+    border-bottom: solid 2px;
+  }
+}
+.recent-part {
+  width: 80%;
+  margin: 0 auto;
+  img {
+    vertical-align: top;
+    display: inline-block;
+    width: 33.3%;
+  }
+  p {
+    margin: 0;
+    margin-left: 11px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 0;
+    display: inline-block;
+    width: 61%;
+    font-size: 13px;
+
+    line-height: 1.4;
+  }
+  a {
+    display:block;
+    @each $prefix in $set-prefix {
+      #{$prefix + 'transition'}: all .3s;
+    }
+    color: black;
+    &:hover {
+      @each $prefix in $set-prefix {
+        #{$prefix + 'transition'}: .3s;
+      }
+      color: #e22255;
+    }
+  }
+}
+
+.category {
+  padding-bottom: 33px;
+  h3 {
+    padding: 0;
+    width: 78%;
+    margin-top:33px;
+    margin-bottom:15px;
+    margin-right:auto;
+    margin-left:auto;
+    font-weight: 100;
+    border-bottom: solid 2px;
+  }
+  form {
+    position: relative;
+  }
+  select {
+    display: block;
+    width: 78%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgba(53, 43, 43, 0.05);
+    color: #888;
+    border: none;
+    background-image: url(./images/icon_arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 12px 10px;
+    background-position: right 10px center;
+    outline: none;
+  }
+}
+
+.tag {
+  padding-bottom: 33px;
+  h3 {
+    padding: 0;
+    width: 78%;
+    margin-top:33px;
+    margin-bottom:15px;
+    margin-right:auto;
+    margin-left:auto;
+    font-weight: 100;
+    border-bottom: solid 2px;
+  }
+}
+.taglist {
+  width: 80%;
+  padding: 0;
+  margin: 0 auto;
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 6px 10px;
+    height: 100%;
+    margin-right: 1px;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    font-size: 0.65rem;
+    background-color: rgba(0, 0, 0, 0.04);
+    color: #0d0015;
+    line-height: 11px;
+    @each $prefix in $set-prefix {
+      #{$prefix + 'transition'}: .3s;
+    }
+    &:hover {
+      @each $prefix in $set-prefix {
+        #{$prefix + 'transition'}: .3s;
+      }
+      background-color: #0d0015!important;
+      color: white;
+    }
+  }
+  i {
+    padding-right: 2px;
+    font-size: 7px;
+  }
+}
+
+
+.search {
+  padding-bottom: 33px;
+  h3 {
+    padding: 0;
+    width: 78%;
+    margin-top:33px;
+    margin-bottom:15px;
+    margin-right:auto;
+    margin-left:auto;
+    font-weight: 100;
+    border-bottom: solid 2px;
+  }
+  form {
+    width: 78%;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+  }
+  i {
+    position: absolute;
+    right: 13px;
+    top: 9px;
+    color: #ddd;
+  }
+}
+#searchbox {
+  display: block;
+  width: 80%;
+  padding: 0 40px 0 10px;
+  margin: 0;
+  text-align: left;
+  line-height: 32px;
+  border-radius: 30px;
+  border: solid 1px #ddd;
+  outline: none;
+}
+#searchbutton {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width:34px;
+  height: 34px;
+  z-index: 1;
+  outline: none;
+  border: none;
+  background-color: initial;
+  appearance: none;
+  overflow: visible;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.recommend {
+  padding-bottom: 22px;
+  h3 {
+    padding: 0;
+    width: 78%;
+    margin-top:33px;
+    margin-bottom:27px;
+    margin-right:auto;
+    margin-left:auto;
+    font-weight: 100;
+    border-bottom: solid 2px;
+  }
+}
+
+.recommend-part {
+  width: 80%;
+  margin: 0 auto;
+
+  img {
+    width: 33.3%;
+  }
+  p {
+    vertical-align: top;
+    margin: 0;
+    margin-left: 11px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 0;
+    display: inline-block;
+    width: 61%;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  a {
+    display:block;
+    font-weight: 500;
+    @each $prefix in $set-prefix {
+      #{$prefix + 'transition'}: all .3s;
+    }
+    color: black;
+    &:hover {
+      @each $prefix in $set-prefix {
+        #{$prefix + 'transition'}: .3s;
+      }
+      color: #e22255;
+    }
+  }
+}
+
+
+
+// ページトップボタン設定
+#page_top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+}
+#page_top a {
+    background-color: #393542;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 7px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+#page_top a:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+    bottom: 35px;
+    text-decoration: none;
+}
+
+
+
+footer {
+  background-color: #393542;
+  padding: 0;
+  width:100%;
+}
+.footerwrap {
+  padding-top: 40px;
+  padding-bottom: 70px;
+  margin: 0 auto;
+  display:flex;
+  color: white;
+}
+
+.footer-1 {
+  width: 33.3%;
+  height: 500px;
+  img {
+    display: block;
+    width: 30%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  p {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+}
+.footerdownload {
+  margin-bottom: 80px;
+  a {
+    padding: 10px 40px;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    width: 40%;
+    background-color: #e22255;
+    letter-spacing: 2px;
+    display: block;
+    margin: 20px auto;
+    @each $prefix in $set-prefix {
+      #{$prefix + 'transition'}: all .3s;
+    }
+    &:hover {
+      @each $prefix in $set-prefix {
+        #{$prefix + 'transition'}: .3s;
+      }
+      opacity: 0.7;
+    }
+  }
+}
+
+.footertag {
+  width: 80%;
+  padding: 0;
+  margin: 0 auto;
+  p {
+    border-left: solid 4px #9acc1e;
+    padding: 0;
+    padding-left: 10px;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  a {
+    display: inline-table;
+    vertical-align: middle;
+    padding: 6px 10px;
+    margin-right: 1px;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    font-size: 0.55rem;
+    background-color:rgba(255, 255, 255, 0.25);
+    line-height: 11px;
+    color: white;
+    @each $prefix in $set-prefix {
+      #{$prefix + 'transition'}: .3s;
+    }
+    &:hover {
+      @each $prefix in $set-prefix {
+        #{$prefix + 'transition'}: .3s;
+      }
+      background-color: #0d0015!important;
+      color: white;
+    }
+  }
+  i {
+    padding-right: 2px;
+    font-size: 7px;
+  }
+}
+
+.footer-2 {
+  width: 33.3%;
+  display: flex;
+  a {
+    display: block;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    font-weight: 400;
+    @each $prefix in $set-prefix {
+      #{$prefix + "transition"}: 0.3s;
+    }
+    &:hover {
+      @each $prefix in $set-prefix {
+        #{$prefix + "transition"}: 0.3s;
+      }
+      transform: translateX(3px);
+    }
+  }
+  i {
+    margin-right: 5px;
+  }
+}
+
+.footer-category {
+  width: 50%;
+}
+.footer-archive {
+  width: 50%;
+}
+.subtitle {
+  p {
+    border-left: solid 4px #9acc1e;
+    padding: 0;
+    padding-left: 10px;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-3 {
+  width: 33.3%;
+}
+
+.footer-recent {
+  width: 100%;
+  margin: 0;
+  img {
+    vertical-align: top;
+    display: inline-block;
+    width: 33.3%;
+  }
+  p {
+    margin: 0;
+    margin-left: 11px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 0;
+    display: inline-block;
+    width: 61%;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  a {
+    position: relative;
+    display:block;
+    margin-bottom: 20px;
+    @each $prefix in $set-prefix {
+      #{$prefix + 'transition'}: all .3s;
+    }
+    color: white;
+    &:hover {
+      @each $prefix in $set-prefix {
+        #{$prefix + 'transition'}: .3s;
+      }
+      color: #e22255;
+    }
+  }
+  span {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    background-color: #9acc1e;
+  }
+}
+
+
+
+.copyright {
+  width: 100%;
+  height: 46px;
+  margin: 0;
+  padding: 0;
+  border-top: solid 1px white;
+  background-color: #393542;
+  p {
+    display: block;
+    margin: 0 auto;
+    line-height: 46px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}

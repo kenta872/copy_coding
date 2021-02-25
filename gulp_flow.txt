@@ -1,0 +1,19 @@
+環境準備
+●node.jsをインストール
+●npmをインストール
+
+gulp準備
+●npm install --save-dev gulp
+npmを使って「gulp」をインストールしてます
+　→--save-dev：ローカルインストールするためのコマンドです。
+　→--save：パッケージのインストール時、package.json の dependencies に追加してくれる機能。
+●gulpfile.jsファイルを用意する
+●gulpfile.jsに記載しているパッケージをインストール
+ npm install --save-gulp パッケージ名
+
+
+●自動コンパイル起動
+　npx gulp
+
+
+

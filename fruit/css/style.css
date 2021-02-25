@@ -1,0 +1,288 @@
+html {
+}
+
+body {
+  font-family: Meiryo;
+  font-size: 80%;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+
+.keyvisual {
+  width: 100%;
+  height: auto;
+  padding-bottom: 72px;
+  margin: 0;
+  position: relative;
+}
+
+.language {
+  position: absolute;
+  margin: 5px;
+  height: 20px;
+  top: 25px;
+  right: 30px;
+  font-size: 14px;
+  color: black;
+}
+.language a {
+  color: black;
+  text-decoration: none;
+}
+.language a:hover {
+  color: white;
+}
+.language span {
+  padding-bottom: 5px;
+  border-bottom: solid 1.5px;
+}
+
+.keyvisual-link {
+  position: absolute;
+  width: 220px;
+  right: 10px;
+  top: 100px;
+}
+.keyvisual-link1 {
+  text-decoration: none;
+}
+.keyvisual-link1:hover {
+  opacity: 50%;
+}
+.link1-part {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  background: #006600;
+  box-shadow: 1px 2px 1px rgba(0,0,0, 0.25);
+}
+.link1-part img {
+  width: initial;
+  margin-right: 10px;
+  height: 30px;
+}
+.link1-text {
+  display: inline-block;
+  font-size: 13px;
+  color: white;
+}
+.link1-text small {
+  font-size: 10px;
+}
+
+
+.slider01 {
+  margin: 0 auto;
+  padding: 0;
+}
+.slick-slide {
+  outline:none;
+}
+.keyvisual-text {
+  position: absolute;
+  padding: 14px 45px;
+  color: white;
+  font-family: 'Prata', serif;
+  font-size: 65px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -90%);
+  -ms-transform: translate(-50%, -50%);  border: solid 3px;
+}
+.keyvisual-logo {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  line-height: 40px;
+  font-size: 15px
+}
+
+.separate {
+  height: 1.5px;
+  margin-bottom: 40px;
+}
+
+#header-nav {
+  width: 1000px;
+  margin: 0 auto 40px auto;
+}
+
+#header-nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+#header-nav li {
+  padding: 0 37px;
+  border-right: solid 1px #ddd;
+}
+#header-nav li:first-child {
+  border-left: solid 1px #ddd;
+}
+#header-nav a {
+  font-size: 17px;
+  color: black;
+}
+#header-nav a:hover {
+  color: #FB851C;
+}
+
+.main {
+  width: 1100px;
+  margin: 0 auto;
+  background: url(../image/contentsBg.png) no-repeat top;
+  position: relative;
+}
+.main-top {
+  display: flex;
+  padding-top: 100px;
+  margin-bottom: 150px;
+}
+
+.mainOrange {
+  width: auto;
+}
+
+.kodawari-title {
+  font-size: 35px;
+}
+
+.kodawari {
+  margin-left: 35px;
+}
+.kodawari-text {
+  font-size: 15px;
+  line-height: 2;
+}
+
+.kodawari-link {
+  background-color: green;
+  text-align: center;
+  width: 200px;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.kodawari-link a {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.kodawari-link:hover {
+  opacity: 50%;
+}
+
+
+.mid-title {
+  width: 1100px;
+  text-align: center;
+}
+.brand {
+  font-size: 2.5rem;
+  border-bottom: solid 2px;
+  padding: ;
+}
+.mid-title p {
+  margin: 60px auto;
+  font-size: 15px;
+}
+
+
+.main-mid {
+  display: flex;
+  margin-bottom: 100px;
+}
+.brandbox {
+  width: 33.3%;
+}
+.brandbox h2 {
+  width: 80%;
+  font-size: 20px;
+  text-align: center;
+  margin: 30px 80px 0 0;
+  padding-bottom: 30px;
+  background: url(../image/brandsLine.png) no-repeat bottom;
+}
+
+.brandbox p {
+  width: 80%;
+  padding-top: 10px;
+  font-size: 15px;
+  line-height: 2;
+}
+
+
+.main-bottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-bottom-part {
+  width: 45%;
+  display: inline-block;
+}
+.main-bottom-part h2 {
+  margin: 0;
+  font-size: 30px;
+  border-bottom: solid 0.5px #e5e5e5;
+}
+.main-bottom-part ul {
+  padding: 0;
+}
+.main-bottom-part li {
+  margin-bottom: 10px;
+}
+.main-bottom-part p {
+  font-size: 13px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 2;
+  margin: 0;
+  padding: 0;
+}
+.topics-date {
+  width: 20%;
+}
+
+.topics-text {
+  width: 75%;
+}
+
+
+footer {
+  text-align: center;
+  padding: 14em 0 5em 0;
+  position: relative;
+  background: url(../image/foot_bg.png), url(../image/fruitApple.png);
+  background-repeat: no-repeat;
+  background-position: top 11em center, top right 8em;
+}
+
+
+
+
+
+
+.mainStrawberry {
+  width: 320px;
+  position: absolute;
+  top: 410px;
+  right: 0;
+}

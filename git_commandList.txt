@@ -1,0 +1,71 @@
+●現在のアカウント確認
+git config user.email
+git config user.name
+
+●アカウント設定
+git config --global user.name "kenta872"
+(kenta872にログインする)
+git config --global user.email test@gmail.com
+（test@gmail.comに変更する）
+
+●最初の動作
+git init 　初期の環境設定
+git add .　カレントディレクトリの状態をステージングにアップ
+git commit -m "コメント"　ローカルリポジトリにアップ
+git remote add 
+
+●新規にリポジトリを獲得
+git clone https://......
+
+●現在のリポジトリを更新
+git pull
+
+●リモートリポジトリにアップロード
+git push origin
+
+●ブランチを作成
+git checkout -b ブランチ名 master
+マスターからdevelopというブランチを作成する
+●ブランチ確認
+git branch
+●ブランチ環境をリモートリポジトリにアップ
+git push origin ブランチ名
+●マスターに切り替え
+git checkout master
+ブランチとは...本番環境のマスターとは別の世界を作り本番環境を守る仕組みのこと
+
+
+●マージ作業
+マスターの環境で以下コマンドを実行
+git merge ブランチ名
+マージとは...作成されたブランチ環境をマスター環境に統合させる
+
+●同じブランチで開発していて状態が異なる場合は先にpushしたほうが正しいほうと認識
+されてしまう。この場合はリモートから最新状態を持ってくる。これをfetchという
+ローカル環境を更新したい場合もこれを使う
+git fetch origin
+
+
+●fetchとpullの違い
+git fetch origin
+最新状態をダウンロード
+git merge origin/ブランチ名
+
+
+git pull ブランチ名
+fetch とmergeを行うショートカットのようなもの
+
+
+●同じブランチの同じファイルの同じ行を編集した場合,git pull するとコンフリクト（どっちが正しいかわからない）というエラーがでる。その場合手動でどちらの修正点も反映させればエラーが解消されます
+
+
+●変更を戻す
+git reset --hard HEAD
+
+●間違ったブランチで作業をしている場合、ブランチの切り替えができません。
+その場合一度ファイルをコミットした状態まで戻さないといけません。もう一度開発するのはめんどうなのでstashコマンドが用意されています。
+これは変更内容を保存して元の状態まで戻すことができます、
+git stash
+ブランチ切り替え
+git stash pop　変更内容を反映
+

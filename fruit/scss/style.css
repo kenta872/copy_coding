@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 20px;
+}
+html a {
+  font-size: 30px;
+}
+html li {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
