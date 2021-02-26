@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/css/swiper.min.css">
   <title>Document</title>
+  <script src="./js/script.js" type="text/javascript"></script>
 </head>
 <body>
   <header>
@@ -17,7 +18,14 @@
       </div>
     </a>
   </header>
-  <div class="g-nav">
+  <div class="header-part ver-smafo">
+    <p id="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </p>
+  </div>
+  <div class="g-nav" id="nav-list">
     <ul class="g-nav-main">
       <li><a href="">選ばれる理由</a></li>
       <li>
@@ -91,8 +99,23 @@
                 <p>グループ会社約1000社、46カ国／地域に展開するガイドライン改訂を支援。</p>
               </div>
             </div>
-            <div class="swiper-slide"><img src="./images/img_portfolio_hitachi.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images/img_portfolio_hitachi.jpg" alt=""></div>
+            <div class="swiper-slide">
+              <img src="./images/img_portfolio_nodai.jpg" alt="">
+              <div class="swiper-text">
+                <img src="./images/logo_nodai.gif" alt="">
+                <h3>東京農業大学</h3>
+                <p>左右の画面分割でイメージによる訴求と記事による情報発信を両立。</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/img_portfolio_jtb_business.jpg" alt="">
+              <div class="swiper-text">
+                <img src="./images/logo_yahoo.gif" alt="">
+                <h3>ヤフー</h3>
+                <p>ターゲットユーザーを意識したデザインとパーツの共通化により、ブランドの統一と
+                運用効率を改善。</p>
+              </div>
+            </div>
           </div>
           <!-- ページネーションの div 要素 -->
           <div class="swiper-pagination"></div>
@@ -193,23 +216,91 @@
           </div>
         </a></li>
       </ul>
-      <ul class="contents-main-blog">
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-      </ul>
     </div>
   </div>
-  <footer></footer>
+  <footer>
+    <div class="company-info">
+      <img src="./images/logo_white.svgz" alt="">
+      <div class="address">
+        <p>〒123-4567</p>
+        <p>東京都中央区銀座3-15-10　菱進銀座イーストミラービル5F</p>
+      </div>
+      <div class="contact-info">
+        <p>TEL 03-1234-5678</p>
+        <p>FAX 03-1234-5678</p>
+      </div>
+      <div class="company-text">
+        <p>株式会社クライマークスは、Webコンサルてぃんぐ、Webサイト制作、スマートフォン制作、
+          レスポンシブWebデザイン制作、システム開発、グラフィック制作、映像制作のプロフェッショナル集団
+          として、貴社に最適なソリューションをご提供します。<br>
+          大規模コーポレートサイトからスマートフォンサイトで、アートディレクションと情報アーキテクチャ設計
+          を融合した、クリエイティブで訴求力の高いサイトを構築しています。</p>
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2021 Web制作のクライマークス.All Rights Reserved</p>
+      </div>
+    </div>
+    <div class="sitemap">
+      <div class="sitemap1">
+        <div class="map1-part1">
+          <div class="top noChild">
+            <h3><a href="">トップ</a></h3>
+          </div>
+          <div class="reason noChild">
+            <h3><a href="">クライマークスが選ばれる理由</a></h3>
+          </div>
+          <div class="colum noChild">
+            <h3><a href="">コラム</a></h3>
+          </div>
+          <div class="contact noChild">
+            <h3><a href="">お問い合わせ</a></h3>
+          </div>
+        </div>
+        <div class="service onChild">
+          <h3><a href="">サービス</a></h3>
+          <p><a href="">Web制作</a></p>
+          <p><a href="">グラフィック制作</a></p>
+          <p><a href="">映像制作</a></p>
+          <p><a href="">クロスメディア制作</a></p>
+          <p><a href="">コンテンツ制作</a></p>
+          <p><a href="">翻訳</a></p>
+        </div>
+        <div class="creative onChild">
+          <h3><a href="">制作実績</a></h3>
+          <p><a href="">Web制作実績</a></p>
+          <p><a href="">グラフィック制作実績</a></p>
+          <p><a href="">映像制作実績</a></p>
+          <p><a href="">クロスメディア制作実績</a></p>
+        </div>
+      </div>
+
+      <div class="sitemap2">
+        <div class="info onChild">
+          <h3><a href="">企業情報</a></h3>
+          <p><a href="">会社概要</a></p>
+          <p><a href="">企業理念</a></p>
+          <p><a href="">地図／アクセス</a></p>
+          <p><a href="">ニュース</a></p>
+        </div>
+        <div class="reqruit onChild">
+          <h3><a href="">採用情報</a></h3>
+          <p><a href="">募集要項</a></p>
+          <p><a href="">代表メッセージ</a></p>
+          <p><a href="">社員を知る！</a></p>
+          <p><a href="">応募フォーム</a></p>
+        </div>
+        <div class="subinfo">
+          <div class="subinfo-part1">
+            <p><a href="">このサイトについて</a></p>
+            <p><a href="">サイトマップ</a></p>
+            <p><a href="">プライバシーポリシー</a></p>
+          </div>
+          <p><a href="">English</a></p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/js/swiper.min.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
