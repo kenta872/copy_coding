@@ -30,22 +30,6 @@ $set-prefix: ("","-moz-","-webkit-");
         width: 100%;
       }
     }
-    h3 {
-      width: 90%;
-      max-width: 480px;
-      margin: 0;
-      padding: 6px 0 6px 0;
-      font-size: 10px;
-      font-weight: normal;
-      text-align: center;
-      color: white;
-      background-color: black;
-      border-radius: 10px;
-      @media screen and (min-width:480px) {
-        padding: 10px 0 10px 0;
-        font-size: 16px;
-      }
-    }
   }
 
   .lovepiano-flow {
@@ -379,11 +363,6 @@ $set-prefix: ("","-moz-","-webkit-");
         }
         .question-check {
           display: none;
-          &:checked ~ .answer {
-            max-height: 50vw;
-            opacity: 1;
-            visibility: visible;
-          }
           &:checked ~ .question-label {
             &:after {
               @each $prefix in $set-prefix {
@@ -436,14 +415,8 @@ $set-prefix: ("","-moz-","-webkit-");
           }
         }
         .answer {
-          max-height: 0;
-          overflow:hidden;
-          opacity: 0;
-          visibility: hidden;
+          display: none;
           background-color: #F4F4F4;
-          @each $prefix in $set-prefix {
-            #{$prefix + "transition"}: 0.3s;
-          }
           p {
             padding: 14px 0 14px 20px;
             margin: 0;
