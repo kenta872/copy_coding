@@ -3,33 +3,77 @@
   font-family: "Roboto", sans-serif;
 }
 
-.lovePiano {
-  margin: 0 auto;
-  margin-top: clamp(80px, 12vw, 100px);
-  width: 90%;
-  max-width: 1200px;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.lovePiano .lovepiano-title {
-  margin-bottom: 60px;
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.lovepiano-title {
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 @media screen and (min-width: 480px) {
-  .lovePiano .lovepiano-title {
+  .lovepiano-title {
     margin-bottom: 80px;
   }
 }
 
-.lovePiano .lovepiano-title .lovepiano-image {
+.lovepiano-title .lovepiano-titleImg {
   width: 90%;
   max-width: 480px;
 }
 
-.lovePiano .lovepiano-title .lovepiano-image img {
+.lovepiano-title .lovepiano-titleImg > img {
   width: 100%;
+}
+
+.lovepiano-flow-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .lovepiano-flow-title {
+    margin-bottom: 60px;
+  }
+}
+
+.lovepiano-flow-title > h2 {
+  font-size: clamp(24px, 4vw, 40px);
+  color: #20527c;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .lovepiano-flow-title > h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.lovepiano-flow-title > p {
+  font-size: clamp(14px, 2vw, 16px);
+  color: #333333;
+}
+
+.lovePiano {
+  margin: 0 auto;
+  margin-top: clamp(80px, 12vw, 100px);
+  width: 90%;
+  max-width: 1200px;
 }
 
 .lovePiano .lovepiano-flow {
