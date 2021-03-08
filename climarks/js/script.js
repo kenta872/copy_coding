@@ -3,16 +3,16 @@ $(function(){
   $("#test").click(function(){
     if(navCheck == false) {
       navCheck=true;
-      $("#nav-list").animate({"right":0},500);
-      $("#all-position").animate({"right":"265px"},500);
+      $("#nav-list").animate({"right":0},300);
+      $("#all-position").animate({"right":"265px"},300);
       $("#nav-list").show();
     }else {
       navCheck=false;
-      $("#nav-list").animate({"right":"-100%"},500);
-      $("#all-position").animate({"right":0},500);
+      $("#nav-list").animate({"right":"-100%"},300);
+      $("#all-position").animate({"right":0},300);
       setTimeout(function(){
         $("#nav-list").hide();
-      },500);
+      },300);
     }
 
   });

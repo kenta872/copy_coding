@@ -1,0 +1,82 @@
+@charset "UTF-8";
+* {
+  font-family: "秀英丸ゴシック B", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "Hiragino Sans", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.header_left_decoration {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.header_right_decoration {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.header_middle {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  max-width: 980px;
+}
+
+.header_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header_menu .header_menu_link {
+  display: flex;
+}
+
+.header_menu .header_menu_nav > nav > ul {
+  display: flex;
+}
+
+.header_menu .header_menu_nav > nav > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  color: #E06168;
+}
+
+.header_menu .header_menu_nav > nav > ul > li > a > p {
+  font-family: "秀英丸ゴシック B", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "Hiragino Sans", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
