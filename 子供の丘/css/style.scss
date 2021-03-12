@@ -204,9 +204,26 @@ header {
   top: -20px;
   background-color: $background;
   width:100%;
+  .bgObject_1 {
+    position: absolute;
+    z-index: 0;
+    top: 10%;
+    left: -5%;
+    opacity: 0.4;
+    height: 80%;
+  }
+  .bgObject_2 {
+    position: absolute;
+    z-index: 0;
+    top: 10%;
+    right: 0;
+    opacity: 0.4;
+    height: 80%;
+  }
 }
 .news_wrapper {
   position: relative;
+  z-index: 1;
   top: -40px;
   display: flex;
   flex-direction: column;
@@ -219,9 +236,28 @@ header {
 }
 
 .news_wrapper_content {
+  position: relative;
   width: 100%;
   margin: 0 auto;
   background-color:white;
+  .leaf_4 {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 60px;
+  }
+  .leaf_2 {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    width: 60px;
+  }
+  .leaf_3 {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    width: 50px;
+  }
 }
 .content_wrapper {
   display: flex;
@@ -241,13 +277,56 @@ header {
 }
 .content_sns {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .content_sns_instagram {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  width: 55%;
+  > h3 {
+    color: $textcolor_main;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
   .instagram_part {
     display: flex;
     flex-wrap: wrap;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      li {
+        margin-bottom: 10px;
+        a {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          img {
+            width:100px;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+.content_sns_facebook {
+  overflow: hidden;
+  width: 35%;
+  > h3 {
+    color: $textcolor_main;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .facebook_part {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: $background;
   }
 }
