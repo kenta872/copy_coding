@@ -5,15 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <script src="./js/jquery-3.5.1.min.js"></script>
-  <script src="./js/script/js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+  <script src="./js/script.js"></script>
+
+  <script>
+  (function(d) {
+    var config = {
+      kitId: 'zri0zyl',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
   <title>Document</title>
 </head>
 <body>
   <header>
-    <div class="header_left_decoration">
-      <img src="./images/img-header-leaf-left.svg" alt="">
-    </div>
     <div class="header_middle">
       <div class="logo">
         <img src="./images/logo.svg" alt="">
@@ -34,10 +44,12 @@
         <div class="header_menu_nav">
           <nav>
             <ul>
-              <li><a href="">
-                <img src="./images/img-nav-about.svg" alt="">
-                <p>園のこと</p>
-              </a></li>
+              <li>
+                <a href="">
+                  <img src="./images/img-nav-about.svg" alt="">
+                  <p>園のこと</p>
+                </a>
+            </li>
               <li><a href="">
                 <img src="./images/img-nav-childcare.svg" alt="">
                 <p>保育のこと</p>
@@ -63,15 +75,10 @@
         </div>
       </div>
     </div>
-    <div class="header_right_decoration">
-      <img src="./images/img-header-leaf-right.svg" alt="">
-    </div>
   </header>
   <main>
     <div class="mainview">
       <img src="./images/img-main7.jpg" alt="">
-      <img class="main_view_left" src="./images/img-slide-side-leaf-left.svg" alt="">
-      <img class="main_view_right" src="./images/img-slide-side-leaf-right.svg" alt="">
       <div class="main_view_text">
         <img class="main_view_text1" src="./images/txt-copy1.png" alt="">
         <img class="main_view_text2" src="./images/txt-copy2.png" alt="">
@@ -120,6 +127,245 @@
       <img class="bgObject_1" src="./images/img-bg-object2.svg" alt="">
       <img class="bgObject_2" src="./images/img-bg-object2.svg" alt="">
     </div>
+    <div class="housin_back">
+      <div class="housin_title">
+        <h4><strong>こどもの丘ナーサリー保育方針</strong></h4>
+        <h3>絵本読み語り教育で<br>こどもたちの豊かなこころを育みます</h3>
+        <p>0歳から絵本読み語り教育を行うことで、「豊かな想像力」、「豊かな感性」を育みます。<br>
+        その想像力や感性はやがて興味を持つことにつながり、<br>
+      そして、興味をもつことは「意欲を持つ好奇心」に変わります。</p>
+        <p>そして、絵本で覚えたたくさんの言葉で「伝える力」が自然と身に付き、<br>
+        絵本の世界に入り込む力は「集中する力」に変わります。</p>
+      </div>
+      <div class="housin_content">
+        <ul>
+          <li>
+            <a href=""><img src="./images/img-policy1.jpg" alt=""></a>
+            <h3>
+              <strong>園のこと</strong><br>
+              <em>開園した3つの想い</em>
+            </h3>
+            <p>私たちは開園するにあたり「子ども達への想い」「はたらくご家庭への想い」「地域への想い」をもって
+            開園しました。私たちの3つの想いをご紹介します。</p>
+            <a href="">園のこと</a>
+          </li>
+          <li>
+            <a href=""><img src="./images/img-policy2.jpg" alt=""></a>
+            <h3>
+              <strong>保育のこと</strong><br>
+              <em>絵本の読み取りで心豊かに</em>
+            </h3>
+            <p>0歳から絵本読み語り教育で、1対1の個別の読み語りを行うことにより、声の温もり、肌のぬくもりを感じて、
+            心の豊かな人になってほしいと願っています。</p>
+            <a href="">保育のこと</a>
+          </li>
+          <li>
+            <a href=""><img src="./images/img-policy3.jpg" alt=""></a>
+            <h3>
+              <strong>入園の案内</strong><br>
+              <em>
+                50年の保育実績
+              </em>
+            </h3>
+            <p>「企業手動型保育園」とは、内閣府が所管する新しい形の保育園です。定型企業の方はもちろん、
+            地域の方も利用できます。</p>
+            <a href="">入園の案内</a>
+          </li>
+          <li>
+            <a href=""><img src="./images/img-policy4.jpg" alt=""></a>
+            <h3>
+              <strong>病児保育</strong><br>
+              <em>
+                病気の時も保育可能
+              </em>
+            </h3>
+            <p>病気やけがで、保育園や小学校にいけない場合専用の保育室で看護師・保育士の下で保育を
+            受けられます。小学生も利用可能です。</p>
+            <a href="">病児保育</a>
+          </li>
+          <li>
+            <a href=""><img src="./images/img-policy5.jpg" alt=""></a>
+            <h3>
+              <strong>子育て支援イベント</strong><br>
+              <em>
+                地域の交流、個育て支援スペース
+              </em>
+            </h3>
+            <p>子育て中の親子の皆さんを対象として教室や口座を開催したり、地域交流や子育て支援を目的としたるんるん
+            cafeを併設しています。</p>
+            <a href="">子育て支援イベント</a>
+          </li>
+          <li>
+            <a href=""><img src="./images/img-policy6.jpg" alt=""></a>
+            <h3>
+              <strong>ランチ</strong><br>
+              <em>
+                たっぷり野菜のじげもんランチ
+              </em>
+            </h3>
+            <p>食にもこたわりをもち、園内で専任の調理スタッフが安心・安全な材料を使ってつくる給食は、乳幼児から
+            食の基盤を作っていきます。</p>
+            <a href="">じげもんランチ</a>
+          </li>
+        </ul>
+      </div>
+      <img class="housin_back_img1" src="./images/img-cloud.svg" alt="">
+      <img class="housin_back_img2" src="./images/img-tree.svg" alt="">
+      <img class="housin_back_img3" src="./images/img-bird.svg" alt="">
+      <img class="housin_back_img4" src="./images/img-grass2.svg" alt="">
+    </div>
+    <div class="loop_wrap">
+      <ul>
+        <li><img src="./images/img-sml-slide1.jpg" alt=""></li>
+        <li><img src="./images/img-sml-slide2.jpg" alt=""></li>
+        <li><img src="./images/img-sml-slide3.jpg" alt=""></li>
+      </ul>
+      <ul>
+        <li><img src="./images/img-sml-slide4.jpg" alt=""></li>
+        <li><img src="./images/img-sml-slide5.jpg" alt=""></li>
+        <li><img src="./images/img-sml-slide6.jpg" alt=""></li>
+      </ul>
+    </div>
+    <div class="company_info_back">
+      <div class="company_info_wrapper">
+        <div class="company_info_view">
+          <img src="./images/img-nursery.jpg" alt="">
+        </div>
+        <div class="company_info_detail">
+          <div class="company_info_text">
+            <div class="sns_wrapper">
+              <a href=""><img src="./images/ico-facebook.svg" alt=""></a>
+              <a href=""><img src="./images/ico-instagram.svg" alt=""></a>
+              <a href=""><img src="./images/ico-line-pink.svg" alt=""></a>
+            </div>
+            <div class="company_name">
+              <h3>社会福祉法人小浜<br>企業主導型保育事業</h3>
+              <h1>こどもの丘ナーサリー</h1>
+            </div>
+            <div class="company_address">
+              <p>〒123-4567</p>
+              <p>長崎県雲仙市愛野町乙2288番地8</p>
+            </div>
+            <dl class="info_list">
+              <div>
+                <dt>設置主体</dt>
+                <dd>社会福祉法人小浜会</dd>
+              </div>
+              <div>
+                <dt>種別</dt>
+                <dd>企業主導型保育事業（内閣府所轄）</dd>
+              </div>
+              <div>
+                <dt>開催日</dt>
+                <dd>月曜～日曜・祝日（週7日開園）</dd>
+              </div>
+              <div>
+                <dt>開所時間</dt>
+                <dd>7:00～20:00</dd>
+              </div>
+              <div>
+                <dt>実施事業</dt>
+                <dd>月極保育／一時預かり／病児保育／地域交流・子育て支援</dd>
+              </div>
+              <div>
+                <dt>対象</dt>
+                <dd>
+                  <dl>
+                    <div>
+                      <dt>月極保育</dt>
+                      <dd>0歳～3歳になる年度末</dd>
+                    </div>
+                    <div>
+                      <dt>一時預かり</dt>
+                      <dd>1歳～6歳になる年度末まで</dd>
+                    </div>
+                    <div>
+                      <dt>病児保育</dt>
+                      <dd>1歳～小学校卒業まで</dd>
+                    </div>
+                  </dl>
+                </dd>
+              </div>
+              <div>
+                <dt>定員</dt>
+                <dd>0歳児：12名／1歳児：12名／2歳児：12名<br>病児保育：3名／一時預かり：余裕活用型</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="company_info_map">
+            <p>準備中</p>
+          </div>
+        </div>
+      </div>
+      <img class="company_info_img1" src="./images/img-bg-object1.svg" alt="">
+      <img class="company_info_img2" src="./images/img-bg-object2.svg" alt="">
+      <img class="company_info_img3" src="./images/img-bg-object3.svg" alt="">
+    </div>
   </main>
+  <footer>
+    <div class="footer_wrapper">
+      <div class="footer_logo">
+        <img src="./images/logo-white.svg" alt="">
+      </div>
+      <div class="footer_detail">
+        <div class="footer_detail_1">
+          <div class="footer_detail_sns">
+            <a class="footer_sns_facebook" href=""><img src="./images/ico-facebook-white.svg" alt="" ></a>
+            <a class="footer_sns_instagram" href=""><img src="./images/ico-instagram-white.svg" alt="" ></a>
+            <a class="footer_sns_line" href=""><img src="./images/ico-line-s-white.svg" alt="" ></a>
+          </div>
+          <div class="footer_detail_googlemap">
+            <a href="">GoogleMap</a>
+          </div>
+        </div>
+        <div class="footer_detail_2">
+          <h3>社会福祉法人小浜会</h3>
+          <h1>企業主導型保育事業<strong>こどもの丘ナーサリー</strong></h1>
+          <p>〒123-4567&nbsp;長崎県雲仙市愛野町乙2288番地8</p>
+          <p>TEL.0120-1234-5678</p>
+        </div>
+      </div>
+      <div class="footer_link">
+        <ul>
+          <li><a href="">
+            <img src="./images/ico-paper-white.svg" alt="">
+            企業の皆様へ
+          </a></li>
+          <li><a href="">
+            <img src="./images/ico-mail.svg" alt="">
+            お問い合わせ
+          </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer_menu">
+      <ul>
+        <li><a href="">
+          <img src="./images/img-nav-about-white.svg" alt="">
+          園のこと
+        </a></li>
+        <li><a href="">
+          <img src="./images/img-nav-childcare-white.svg" alt="">
+          保育のこと
+        </a></li>
+        <li><a href="">
+          <img src="./images/img-nav-information-white.svg" alt="">
+          入園案内
+        </a></li>
+        <li><a href="">
+          <img src="./images/img-nav-sick-child-white.svg" alt="">
+          病児保育
+        </a></li>
+        <li><a href="">
+          <img src="./images/img-nav-lunch-white.svg" alt="">
+          こだわりランチ
+        </a></li>
+        <li><a href="">
+          <img src="./images/img-nav-cafe-white.svg" alt="">
+          るんるんcafe
+        </a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,10 +1,11 @@
 $textcolor_main: #E06168;
 $textcolor_sub: #0099cb;
 $background: #E9F7F8;
-$font-family: '秀英丸ゴシック B', '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック体', YuGothic, 'Hiragino Sans', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+$font-family-bold: dnp-shuei-mgothic-std, sans-serif;
+$font-family-normal: メイリオ、ヒラギノ角ゴシック、Arial;
 
 * {
-  font-family: $font-family;
+  font-family: $font-family-bold;
 }
 
 body {
@@ -18,7 +19,19 @@ p {
   padding: 0;
   margin: 0;
 }
+h1 {
+  padding: 0;
+  margin: 0;
+}
+h2 {
+  padding: 0;
+  margin: 0;
+}
 h3 {
+  padding: 0;
+  margin: 0;
+}
+h4 {
   padding: 0;
   margin: 0;
 }
@@ -40,31 +53,32 @@ header {
   display: flex;
   justify-content: center;
   padding: 20px 0;
+  &:before {
+    display: block;
+    content:"";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    background:url(../images/img-header-leaf-left.svg) repeat-y left top 10px;
+    background-size: 100% auto;
+    background-repeat: space;
+  }
+  &:after {
+    display: block;
+    content:"";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64px;
+    background:url(../images/img-header-leaf-right.svg) repeat-y right top 10px;
+    background-size: 100% auto;
+    background-repeat: space;
+  }
 }
 
-//サイドの装飾
-.header_left_decoration {
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  width: 6%;
-  margin-top: 20px;
-  > img {
-    width: 100%;
-  }
-}
-.header_right_decoration {
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  top: 0;
-  width: 6%;
-  margin-top: 20px;
-  > img {
-    width: 100%;
-  }
-}
 
 //メニュー
 .header_middle {
@@ -149,7 +163,7 @@ header {
             }
             > p {
               font-size: clamp(14px,2vw,16px);
-              font-family: $font-family;
+              font-family: $font-family-bold;
             }
           }
           &:after {
@@ -174,12 +188,28 @@ header {
     width: 100%;
     object-fit: cover;
   }
-  .main_view_left {
-    position: absolute;
+  &:before {
+    display: block;
+    content:"";
     height: 100%;
-    width: 8%;
-    left: 0;
+    position: absolute;
     top: 0;
+    width: 64px;
+    background:url(../images/img-slide-side-leaf-left.svg) repeat-y left top 50px;
+    background-size: 100% auto;
+    background-repeat: space;
+  }
+  &:after {
+    display: block;
+    content:"";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64px;
+    background:url(../images/img-slide-side-leaf-right.svg) repeat-y right top 50px;
+    background-size: 100% auto;
+    background-repeat: space;
   }
   .main_view_right {
     position: absolute;
@@ -201,7 +231,7 @@ header {
 
 .news_back {
   position: relative;
-  top: -20px;
+  top: 0;
   background-color: $background;
   width:100%;
   .bgObject_1 {
@@ -232,12 +262,14 @@ header {
 }
 .news_wrapper_top {
   width: 100%;
+  max-width: 980px;
   margin: 0 auto;
 }
 
 .news_wrapper_content {
   position: relative;
   width: 100%;
+  max-width: 980px;
   margin: 0 auto;
   background-color:white;
   .leaf_4 {
@@ -264,7 +296,7 @@ header {
   flex-direction: column;
   align-items: center;
   width: 90%;
-  margin: 40px auto;
+  margin: 40px auto 100px auto;
   .clock {
     height: 60px;
   }
@@ -294,9 +326,9 @@ header {
     flex-wrap: wrap;
     ul {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
       li {
+        margin-right: 10px;
         margin-bottom: 10px;
         a {
           display: flex;
@@ -314,7 +346,8 @@ header {
   }
 }
 .content_sns_facebook {
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   width: 35%;
   > h3 {
     color: $textcolor_main;
@@ -322,11 +355,509 @@ header {
     margin-bottom: 10px;
   }
   .facebook_part {
-    height: 100%;
     width: 100%;
+    flex-grow: 1;
     display: flex;
     justify-content:center;
     align-items: center;
     background-color: $background;
+  }
+}
+
+
+
+//こどもの丘保育方針
+.housin_back {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &:before {
+    display: block;
+    content:"";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 64px;
+    background:url(../images/img-leaf-loop-short.svg) repeat-y left top 30px;
+    background-size: 100% auto;
+  }
+  &:after {
+    display: block;
+    content:"";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scaleX(-1);
+    width: 64px;
+    background:url(../images/img-leaf-loop-short.svg) repeat-y left top 30px;
+    background-size: 100% auto;
+  }
+  .housin_back_img1 {
+    position: absolute;
+    top: 180px;
+    left: 180px;
+    width: 60px;
+  }
+  .housin_back_img2 {
+    position: absolute;
+    top: 320px;
+    left: 140px;
+    width: 80px;
+  }
+  .housin_back_img3 {
+    position: absolute;
+    top: 180px;
+    right: 120px;
+    width: 100px;
+  }
+  .housin_back_img4 {
+    position: absolute;
+    top: 360px;
+    right: 100px;
+    width:140px;
+  }
+}
+.housin_title {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  width: 80%;
+  margin: 0 auto 60px auto;
+  > h4 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: $textcolor_sub;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    &:after {
+      content:"";
+      height: 2px;
+      width: 100%;
+      background-color: $textcolor_sub;
+    }
+  }
+  > h3 {
+    text-align: center;
+    color: $textcolor_main;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+  > p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-family: メイリオ、ヒラギノ角ゴシック、Arial;
+  }
+}
+.housin_content {
+  width: 80%;
+  max-width:980px;
+  margin: 0 auto;
+  > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    > li {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
+      margin-right: 10px;
+      margin-bottom: 60px;
+      a:first-child {
+        img {
+          width: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+      >h3 {
+        position: relative;
+        width: 100%;
+        margin: -30px 0 20px 0;
+        >strong {
+          display: inline-block;
+          background-color: $textcolor_main;
+          color: white;
+          padding: 0 10px;
+          font-size: 18px;
+        }
+        >em {
+          display: inline-block;
+          background-color:#FFE5E6;
+          color: $textcolor_main;
+          font-style: normal;
+          padding: 4px 10px;
+          font-size: 16px;
+        }
+      }
+      a:last-child {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-radius: 30px;
+        border: solid 2px $textcolor_main;
+        text-align: center;
+        padding: 5px;
+        color: $textcolor_main;
+      }
+      > p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 24px;
+        margin-bottom: 80px;
+        font-family: メイリオ、ヒラギノ角ゴシック、Arial;
+      }
+    }
+  }
+}
+
+
+//画像ループ箇所
+.loop_wrap {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  > ul {
+    display: flex;
+    width: auto;
+    height: 300px;
+    > li {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+.loop_wrap ul:first-child {
+  // loop animation-duration animetion-delay 繰り返し処理
+  animation: loop 50s -25s linear infinite;
+}
+
+.loop_wrap ul:last-child {
+  animation: loop2 50s linear infinite;
+}
+
+
+
+
+//会社概要箇所
+.company_info_back {
+  position: relative;
+  background-color: $background;
+  padding-top: 100px;
+  padding-bottom: 160px;
+  .company_info_img1 {
+    position: absolute;
+    top:200px;
+    left:0;
+    opacity: 0.4;
+  }
+  .company_info_img2 {
+    position: absolute;
+    top:200px;
+    right:0;
+    opacity: 0.4;
+  }
+  .company_info_img3 {
+    position: absolute;
+    bottom:0;
+    left: 20%;
+    opacity: 0.4;
+    transform: scaleY(-1);
+  }
+}
+.company_info_wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 980px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.company_info_view {
+  width: 90%;
+  margin-bottom: 50px;
+  > img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.company_info_detail {
+  width: 90%;
+  display: flex;
+  .company_info_text {
+    position: relative;
+    width: 50%;
+    margin-right: 5%;
+    .sns_wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      >a{
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin-right: 10px;
+        >img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .company_info_map {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px;
+  }
+}
+.company_name {
+  margin-bottom: 10px;
+  > h3 {
+    font-size: 14px;
+    font-family: メイリオ、ヒラギノ角ゴシック、Arial;
+    font-weight: 400;
+    color: $textcolor_main;
+  }
+  > h1 {
+    font-size: 24px;
+    color: $textcolor_main;
+  }
+}
+.company_address {
+  margin-bottom: 30px;
+  > p {
+    font-size: 16px;
+    font-family: メイリオ、ヒラギノ角ゴシック、Arial;
+  }
+}
+.info_list {
+  > div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 14px 0 14px 0;
+    &:before {
+      content:"";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 0.5px;
+      background-color: $textcolor_main;
+    }
+    &:last-child {
+      &:after {
+        content:"";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 0.5px;
+        background-color: $textcolor_main;
+      }
+    }
+    >dt {
+      width:100px;
+      font-size: 14px;
+      color: $textcolor_main;
+      padding-left: 10px;
+    }
+    >dd {
+      width: calc(100% - 110px);
+      margin: 0;
+      padding-right: 10px;
+      font-size: 14px;
+      font-family: メイリオ、ヒラギノ角ゴシック、Arial;
+      >dl {
+        > div {
+          display: flex;
+          align-items: center;
+          >dt {
+            width: 100px;
+            font-size: 14px;
+            font-family: メイリオ、ヒラギノ角ゴシック、Arial;
+          }
+          >dd {
+            margin: 0;
+            padding: 4px 0 4px 0;
+            font-size: 14px;
+            font-family: メイリオ、ヒラギノ角ゴシック、Arial;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #E5555D;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background: url(../images/img-leaf-loop.svg) ;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 60px;
+  }
+}
+.footer_logo {
+  >img {
+    height: 160px;
+  }
+}
+.footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 90%;
+  max-width: 980px;
+}
+.footer_detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer_detail_1 {
+  display: flex;
+  justify-content: space-between;
+  .footer_detail_googlemap {
+    >a {
+      color: white;
+      border: solid 2px white;
+      border-radius: 30px;
+      padding: 5px 20px;
+    }
+  }
+  .footer_detail_sns {
+    display: flex;
+    >a {
+      display: block;
+      width:  30px;
+      height: 30px;
+      margin-right: 20px;
+      >img {
+        width: 100%;
+      }
+    }
+  }
+}
+.footer_detail_2 {
+  >h3 {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  >h1 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    >strong {
+      margin-left: 10px;
+      font-size: 18px;
+    }
+  }
+  >p {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
+.footer_link {
+  display: flex;
+  align-items: center;
+  >ul {
+    display: flex;
+    >li {
+      >a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        font-size: 15px;
+        color: white;
+        border-radius: 50%;
+        background:url(../images/ico-dashed-circle.svg) no-repeat;
+        background-size: cover;
+        >img {
+          width: 24px;
+        }
+      }
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+.footer_menu {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 980px;
+  >ul {
+    display: flex;
+    >li {
+      flex-grow: 1;
+      >a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        padding: 20px;
+        color: white;
+        font-size: 16px;
+        >img {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }
