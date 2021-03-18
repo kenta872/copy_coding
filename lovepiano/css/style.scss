@@ -49,43 +49,21 @@ li {
 
 //lovepianoロゴ
 .lovepiano-title {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   @media screen and (min-width:480px) {
-    margin-bottom: 80px;
-  }
-  .lovepiano-titleImg {
-    width: 100%;
-    max-width: 600px;
-    > img {
-      width: 100%;
-    }
-    @media screen and (min-width:980px) {
-      width: 65%;
-    }
-  }
-}
-//ペイントピアノ設置について
-.lovepiano-flow-title {
-  text-align: center;
-  margin-bottom: 30px;
-  @media screen and (min-width:480px) {
     margin-bottom: 60px;
   }
-  > h2 {
+  >h2 {
     font-size: clamp(24px,4vw,40px);
-    color: $color-blue;
-    font-weight: 400;
-    margin-bottom:10px;
-    @media screen and (min-width:480px) {
-      margin-bottom: 20px;
-    }
+    color: #2E1409;
+    font-weight: 600;
   }
-  > p {
-    font-size: clamp(14px,2vw,16px);
-    color: $maintextcolor-gray;
+  >p {
+    font-size: clamp(12px,2vw,16px);
+    color: $subtextcolor_gray;
   }
 }
 
@@ -97,11 +75,11 @@ li {
   background-color: $color-base;
   margin-bottom: 30px;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   @media screen and (min-width:480px) {
     margin-bottom: 60px;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
   }
   > h3 {
     position: relative;
@@ -209,7 +187,7 @@ li {
             margin-left: 20px;
             font-size: 16px;
             font-weight: normal;
-            width: 86%;
+            width: 80%;
             @media screen and (min-width:480px) {
               margin-left: 40px;
               font-size: 20px;
@@ -240,7 +218,7 @@ li {
       }
       &:hover {
         opacity: 0.8;
-        transform: translateY(5px);
+        transform: translateY(4px);
         @each $prefix in $set-prefix {
           #{$prefix + "transition"}: 0.5s;
         }
@@ -272,15 +250,17 @@ li {
           font-weight: bold;
           color: $textcolor-red;
           margin-top: 20px;
+          margin-bottom: 20px;
           @media screen and (min-width:480px) {
             margin-top: 40px;
+            margin-bottom: 40px;
           }
           @each $prefix in $set-prefix {
             #{$prefix + "transition"}: 0.5s;
           }
           &:hover {
             opacity: 0.8;
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             @each $prefix in $set-prefix {
               #{$prefix + "transition"}: 0.5s;
             }
@@ -300,12 +280,21 @@ li {
       }
       > ul {
         > li {
+          margin-bottom: 16px;
+          @media screen and (min-width:480px) {
+            margin-bottom: 0;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
           > p {
-            margin-bottom: 16px;
             font-size: 16px;
             color: $maintextcolor-gray;
+          }
+          > p:nth-child(2) {
+            margin-left: 16px;
             @media screen and (min-width:480px) {
-              margin-bottom: 0;
+              margin-bottom: 16px;
             }
           }
         }
@@ -445,22 +434,24 @@ li {
   @media screen and (min-width:480px) {
     margin-bottom: 100px;
   }
-  > p {
-    text-align: center;
-    color: $subtextcolor-gray;
-    font-size: clamp(12px,2vw,14px);
-    margin-bottom: clamp(4px,1vw,8px);
-  }
-  > h2 {
-    text-align: center;
-    color: $color-blue;
-    font-size: clamp(24px,4vw,40px);
-    font-weight: normal;
-    margin-bottom: 20px;
+  .lovepiano-contact-title {
+    margin-bottom: 30px;
     @media screen and (min-width:480px) {
       margin-bottom: 40px;
     }
+    > h2 {
+      text-align: center;
+      color: #2E1409;
+      font-size: clamp(24px,4vw,40px);
+      font-weight: 600;
+    }
+    > p {
+      text-align: center;
+      color: $subtextcolor-gray;
+      font-size: clamp(12px,2vw,16px);
+    }
   }
+
   .precautions {
     padding: 20px 0 20px 0;
     margin-bottom: 30px;

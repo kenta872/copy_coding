@@ -43,7 +43,7 @@ li {
 }
 
 .lovepiano-title {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,52 +51,19 @@ li {
 
 @media screen and (min-width: 480px) {
   .lovepiano-title {
-    margin-bottom: 80px;
-  }
-}
-
-.lovepiano-title .lovepiano-titleImg {
-  width: 100%;
-  max-width: 600px;
-}
-
-.lovepiano-title .lovepiano-titleImg > img {
-  width: 100%;
-}
-
-@media screen and (min-width: 980px) {
-  .lovepiano-title .lovepiano-titleImg {
-    width: 65%;
-  }
-}
-
-.lovepiano-flow-title {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-@media screen and (min-width: 480px) {
-  .lovepiano-flow-title {
     margin-bottom: 60px;
   }
 }
 
-.lovepiano-flow-title > h2 {
+.lovepiano-title > h2 {
   font-size: clamp(24px, 4vw, 40px);
-  color: #20527c;
-  font-weight: 400;
-  margin-bottom: 10px;
+  color: #2E1409;
+  font-weight: 600;
 }
 
-@media screen and (min-width: 480px) {
-  .lovepiano-flow-title > h2 {
-    margin-bottom: 20px;
-  }
-}
-
-.lovepiano-flow-title > p {
-  font-size: clamp(14px, 2vw, 16px);
-  color: #333333;
+.lovepiano-title > p {
+  font-size: clamp(12px, 2vw, 16px);
+  color: #666666;
 }
 
 .lovepiano-flow {
@@ -106,14 +73,14 @@ li {
   background-color: #fef4ee;
   margin-bottom: 30px;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 @media screen and (min-width: 480px) {
   .lovepiano-flow {
     margin-bottom: 60px;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
   }
 }
 
@@ -257,7 +224,7 @@ li {
   margin-left: 20px;
   font-size: 16px;
   font-weight: normal;
-  width: 86%;
+  width: 80%;
 }
 
 @media screen and (min-width: 480px) {
@@ -295,7 +262,7 @@ li {
 
 .lovepiano-flow .setting-condition > #setting-condition-open:hover {
   opacity: 0.8;
-  transform: translateY(5px);
+  transform: translateY(4px);
   transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -332,6 +299,7 @@ li {
   font-weight: bold;
   color: #d10000;
   margin-top: 20px;
+  margin-bottom: 20px;
   transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -340,12 +308,13 @@ li {
 @media screen and (min-width: 480px) {
   .lovepiano-flow .setting-condition .list-wrapper .closebutton-wrapper > #setting-condition-close {
     margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 
 .lovepiano-flow .setting-condition .list-wrapper .closebutton-wrapper > #setting-condition-close:hover {
   opacity: 0.8;
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -363,15 +332,32 @@ li {
   -webkit-transform: rotate(-45deg);
 }
 
-.lovepiano-flow .setting-condition .list-wrapper > ul > li > p {
+.lovepiano-flow .setting-condition .list-wrapper > ul > li {
   margin-bottom: 16px;
+}
+
+@media screen and (min-width: 480px) {
+  .lovepiano-flow .setting-condition .list-wrapper > ul > li {
+    margin-bottom: 0;
+  }
+}
+
+.lovepiano-flow .setting-condition .list-wrapper > ul > li:last-child {
+  margin-bottom: 0;
+}
+
+.lovepiano-flow .setting-condition .list-wrapper > ul > li > p {
   font-size: 16px;
   color: #333333;
 }
 
+.lovepiano-flow .setting-condition .list-wrapper > ul > li > p:nth-child(2) {
+  margin-left: 16px;
+}
+
 @media screen and (min-width: 480px) {
-  .lovepiano-flow .setting-condition .list-wrapper > ul > li > p {
-    margin-bottom: 0;
+  .lovepiano-flow .setting-condition .list-wrapper > ul > li > p:nth-child(2) {
+    margin-bottom: 16px;
   }
 }
 
@@ -536,25 +522,27 @@ li {
   }
 }
 
-.lovepiano-contact > p {
-  text-align: center;
-  color: #666666;
-  font-size: clamp(12px, 2vw, 14px);
-  margin-bottom: clamp(4px, 1vw, 8px);
-}
-
-.lovepiano-contact > h2 {
-  text-align: center;
-  color: #20527c;
-  font-size: clamp(24px, 4vw, 40px);
-  font-weight: normal;
-  margin-bottom: 20px;
+.lovepiano-contact .lovepiano-contact-title {
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 480px) {
-  .lovepiano-contact > h2 {
+  .lovepiano-contact .lovepiano-contact-title {
     margin-bottom: 40px;
   }
+}
+
+.lovepiano-contact .lovepiano-contact-title > h2 {
+  text-align: center;
+  color: #2E1409;
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 600;
+}
+
+.lovepiano-contact .lovepiano-contact-title > p {
+  text-align: center;
+  color: #666666;
+  font-size: clamp(12px, 2vw, 16px);
 }
 
 .lovepiano-contact .precautions {
