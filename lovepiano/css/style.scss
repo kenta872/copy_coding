@@ -1,4 +1,4 @@
-$font-family: 'Roboto',sans-serif;
+$font-family: "Hiragino Kaku Gothic Pro", "Hiragino Kaku Gothic ProN", Meiryo, メイリオ, sans-serif;
 $subtextcolor-gray: #666666;
 $maintextcolor-gray: #333333;
 $textcolor-red: #d10000;
@@ -12,6 +12,8 @@ $set-prefix: ("","-moz-","-webkit-");
 * {
   font-family: $font-family;
 }
+
+//resetCSS
 body {
   margin: 0;
   padding: 0;
@@ -43,6 +45,7 @@ li {
 .lovePiano {
   margin: 0 auto;
   margin-top: clamp(80px,12vw,100px);
+  margin-bottom: clamp(80px,12vw,100px);
   width: 90%;
   max-width: 1200px;
 }
@@ -187,10 +190,17 @@ li {
             margin-left: 20px;
             font-size: 16px;
             font-weight: normal;
-            width: 80%;
+            width: 86%;
+            >b:after {
+              content:"\A";
+              white-space: pre;
+            }
             @media screen and (min-width:480px) {
               margin-left: 40px;
               font-size: 20px;
+              >b:after {
+                display: none;
+              }
             }
           }
         }
@@ -430,10 +440,6 @@ li {
 
 //お問い合わせ
 .lovepiano-contact {
-  margin-bottom: 60px;
-  @media screen and (min-width:480px) {
-    margin-bottom: 100px;
-  }
   .lovepiano-contact-title {
     margin-bottom: 30px;
     @media screen and (min-width:480px) {
@@ -487,6 +493,7 @@ li {
       max-width: 400px;
       background-color: $color-accent;
       font-size: clamp(14px,2vw,16px);
+      font-weight: 600;
       border-radius: 40px;
       &:hover {
         opacity: 0.8;

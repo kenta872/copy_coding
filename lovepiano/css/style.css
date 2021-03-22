@@ -1,5 +1,6 @@
+@charset "UTF-8";
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Hiragino Kaku Gothic Pro", "Hiragino Kaku Gothic ProN", Meiryo, メイリオ, sans-serif;
 }
 
 body {
@@ -38,6 +39,7 @@ li {
 .lovePiano {
   margin: 0 auto;
   margin-top: clamp(80px, 12vw, 100px);
+  margin-bottom: clamp(80px, 12vw, 100px);
   width: 90%;
   max-width: 1200px;
 }
@@ -224,13 +226,21 @@ li {
   margin-left: 20px;
   font-size: 16px;
   font-weight: normal;
-  width: 80%;
+  width: 86%;
+}
+
+.lovepiano-flow > ul > li .flow-wrapper .flow-contents > p > b:after {
+  content: "\A";
+  white-space: pre;
 }
 
 @media screen and (min-width: 480px) {
   .lovepiano-flow > ul > li .flow-wrapper .flow-contents > p {
     margin-left: 40px;
     font-size: 20px;
+  }
+  .lovepiano-flow > ul > li .flow-wrapper .flow-contents > p > b:after {
+    display: none;
   }
 }
 
@@ -512,16 +522,6 @@ li {
   }
 }
 
-.lovepiano-contact {
-  margin-bottom: 60px;
-}
-
-@media screen and (min-width: 480px) {
-  .lovepiano-contact {
-    margin-bottom: 100px;
-  }
-}
-
 .lovepiano-contact .lovepiano-contact-title {
   margin-bottom: 30px;
 }
@@ -587,6 +587,7 @@ li {
   max-width: 400px;
   background-color: #f8c1b8;
   font-size: clamp(14px, 2vw, 16px);
+  font-weight: 600;
   border-radius: 40px;
 }
 
