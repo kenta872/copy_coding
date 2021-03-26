@@ -45,10 +45,10 @@ li {
 }
 
 .lovepiano-title {
-  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 480px) {
@@ -59,8 +59,9 @@ li {
 
 .lovepiano-title > h2 {
   font-size: clamp(24px, 4vw, 40px);
-  color: #2E1409;
   font-weight: 600;
+  letter-spacing: 2px;
+  color: #2E1409;
 }
 
 .lovepiano-title > p {
@@ -72,10 +73,10 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fef4ee;
   margin-bottom: 30px;
   padding-top: 30px;
   padding-bottom: 10px;
+  background-color: #fef4ee;
 }
 
 @media screen and (min-width: 480px) {
@@ -88,9 +89,9 @@ li {
 
 .lovepiano-flow > h3 {
   position: relative;
-  font-size: clamp(16px, 2vw, 20px);
-  border-bottom: 2px solid #000000;
   margin-bottom: 40px;
+  border-bottom: 2px solid #000000;
+  font-size: clamp(16px, 2vw, 20px);
 }
 
 @media screen and (min-width: 480px) {
@@ -112,12 +113,12 @@ li {
 }
 
 .lovepiano-flow > h3:after {
+  content: '';
   position: absolute;
   bottom: -12px;
   left: 44%;
   width: 0;
   height: 0;
-  content: '';
   border-width: 14px 12px 0 12px;
   border-style: solid;
   border-color: #fef4ee transparent transparent transparent;
@@ -138,18 +139,18 @@ li {
 }
 
 .lovepiano-flow > ul > li {
-  margin-bottom: 24px;
-  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 24px;
+  list-style: none;
   height: 60px;
 }
 
 @media screen and (min-width: 480px) {
   .lovepiano-flow > ul > li {
-    margin-bottom: 32px;
     height: 80px;
+    margin-bottom: 32px;
   }
 }
 
@@ -162,10 +163,10 @@ li {
 }
 
 .lovepiano-flow > ul > li:after {
-  margin-top: 6px;
+  content: '';
   width: 0;
   height: 0;
-  content: '';
+  margin-top: 6px;
   border-width: 12px 10px 0 10px;
   border-style: solid;
   border-color: #666666 transparent transparent transparent;
@@ -179,9 +180,9 @@ li {
 }
 
 .lovepiano-flow > ul > li .flow-wrapper {
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  width: 100%;
   height: 60px;
 }
 
@@ -204,8 +205,8 @@ li {
 .lovepiano-flow > ul > li .flow-wrapper .number > p {
   margin: 0;
   padding: 0;
-  color: white;
   font-size: 36px;
+  color: white;
 }
 
 @media screen and (min-width: 480px) {
@@ -223,10 +224,10 @@ li {
 }
 
 .lovepiano-flow > ul > li .flow-wrapper .flow-contents > p {
+  width: 90%;
   margin-left: 20px;
-  font-size: 16px;
+  font-size: clamp(12px, 4vw, 16px);
   font-weight: normal;
-  width: 86%;
 }
 
 .lovepiano-flow > ul > li .flow-wrapper .flow-contents > p > b:after {
@@ -246,19 +247,19 @@ li {
 
 .lovepiano-flow .setting-condition {
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .lovepiano-flow .setting-condition > #setting-condition-open {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: bold;
   color: #d10000;
-  margin-bottom: 20px;
   transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -291,9 +292,9 @@ li {
 }
 
 .lovepiano-flow .setting-condition .list-wrapper {
+  display: none;
   width: 90%;
   max-width: 800px;
-  display: none;
 }
 
 .lovepiano-flow .setting-condition .list-wrapper .closebutton-wrapper {
@@ -305,11 +306,11 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: bold;
   color: #d10000;
-  margin-top: 20px;
-  margin-bottom: 20px;
   transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -358,6 +359,7 @@ li {
 
 .lovepiano-flow .setting-condition .list-wrapper > ul > li > p {
   font-size: 16px;
+  letter-spacing: 1px;
   color: #333333;
 }
 
@@ -398,24 +400,24 @@ li {
 }
 
 .lovepiano-question > h3:before {
+  content: '';
   position: absolute;
   bottom: -15px;
   left: 44%;
   width: 0;
   height: 0;
-  content: '';
   border-width: 14px 12px 0 12px;
   border-style: solid;
   border-color: #000000 transparent transparent transparent;
 }
 
 .lovepiano-question > h3:after {
+  content: '';
   position: absolute;
   bottom: -12px;
   left: 44%;
   width: 0;
   height: 0;
-  content: '';
   border-width: 14px 12px 0 12px;
   border-style: solid;
   border-color: white transparent transparent transparent;
@@ -492,6 +494,7 @@ li {
   word-break: break-all;
   font-size: clamp(14px, 2vw, 18px);
   color: white;
+  letter-spacing: 1px;
 }
 
 @media screen and (min-width: 480px) {
@@ -513,6 +516,7 @@ li {
   width: 90%;
   word-break: break-all;
   color: #333333;
+  letter-spacing: 1px;
 }
 
 @media screen and (min-width: 480px) {
@@ -537,6 +541,7 @@ li {
   color: #2E1409;
   font-size: clamp(24px, 4vw, 40px);
   font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .lovepiano-contact .lovepiano-contact-title > p {
@@ -546,11 +551,11 @@ li {
 }
 
 .lovepiano-contact .precautions {
-  padding: 20px 0 20px 0;
-  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px 0 20px 0;
+  margin-bottom: 30px;
   width: 100%;
   background-color: #fef4ee;
 }
@@ -569,6 +574,7 @@ li {
   color: #333333;
   text-align: left;
   line-height: clamp(24px, 3vw, 32px);
+  letter-spacing: 1px;
 }
 
 .lovepiano-contact .lovepiano-button {

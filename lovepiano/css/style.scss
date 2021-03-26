@@ -52,17 +52,18 @@ li {
 
 //lovepianoロゴ
 .lovepiano-title {
-  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
   @media screen and (min-width:480px) {
     margin-bottom: 60px;
   }
   >h2 {
     font-size: clamp(24px,4vw,40px);
-    color: #2E1409;
     font-weight: 600;
+    letter-spacing: 2px;
+    color: #2E1409;
   }
   >p {
     font-size: clamp(12px,2vw,16px);
@@ -75,10 +76,10 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $color-base;
   margin-bottom: 30px;
   padding-top: 30px;
   padding-bottom: 10px;
+  background-color: $color-base;
   @media screen and (min-width:480px) {
     margin-bottom: 60px;
     padding-top: 60px;
@@ -86,9 +87,9 @@ li {
   }
   > h3 {
     position: relative;
-    font-size: clamp(16px,2vw,20px);
-    border-bottom: 2px solid #000000;
     margin-bottom: 40px;
+    border-bottom: 2px solid #000000;
+    font-size: clamp(16px,2vw,20px);
     @media screen and (min-width:480px) {
       margin-bottom: 60px;
     }
@@ -104,12 +105,12 @@ li {
       border-color: #000000 transparent transparent transparent;
     }
     &:after {
+      content: '';
       position: absolute;
       bottom: -12px;
       left: 44%;
       width: 0;
       height: 0;
-      content: '';
       border-width: 14px 12px 0 12px;
       border-style: solid;
       border-color: $color-base transparent transparent transparent;
@@ -125,15 +126,15 @@ li {
       margin-bottom: 40px;
     }
     > li {
-      margin-bottom: 24px;
-      list-style: none;
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 24px;
+      list-style: none;
       height: 60px;
       @media screen and (min-width:480px) {
-        margin-bottom: 32px;
         height: 80px;
+        margin-bottom: 32px;
       }
       &:last-child {
         margin-bottom: 0;
@@ -142,10 +143,10 @@ li {
         }
       }
       &:after {
-        margin-top: 6px;
+        content: '';
         width: 0;
         height: 0;
-        content: '';
+        margin-top: 6px;
         border-width: 12px 10px 0 10px;
         border-style: solid;
         border-color: $subtextcolor-gray transparent transparent transparent;
@@ -155,9 +156,9 @@ li {
         }
       }
       .flow-wrapper {
-        width: 100%;
         display: flex;
         justify-content: space-between;
+        width: 100%;
         height: 60px;
         @media screen and (min-width:480px) {
           height: 80px;
@@ -173,8 +174,8 @@ li {
           > p {
             margin: 0;
             padding: 0;
-            color: white;
             font-size: 36px;
+            color: white;
             @media screen and (min-width:480px) {
               font-size: 48px;
             }
@@ -187,10 +188,10 @@ li {
           height: 100%;
           background-color: white;
           > p {
+            width: 90%;
             margin-left: 20px;
-            font-size: 16px;
+            font-size: clamp(12px,4vw,16px);
             font-weight: normal;
-            width: 86%;
             >b:after {
               content:"\A";
               white-space: pre;
@@ -209,17 +210,17 @@ li {
   }
   .setting-condition {
     display: flex;
-    width: 100%;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     > #setting-condition-open {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 20px;
       font-size: 16px;
       font-weight: bold;
       color: $textcolor-red;
-      margin-bottom: 20px;
       @media screen and (min-width:480px) {
         margin-bottom: 40px;
       }
@@ -246,9 +247,9 @@ li {
       }
     }
     .list-wrapper {
+      display: none;
       width: 90%;
       max-width: 800px;
-      display: none;
       .closebutton-wrapper {
         display: flex;
         justify-content: center;
@@ -256,11 +257,11 @@ li {
           display: flex;
           flex-direction: column;
           align-items: center;
+          margin-top: 20px;
+          margin-bottom: 20px;
           font-size: 16px;
           font-weight: bold;
           color: $textcolor-red;
-          margin-top: 20px;
-          margin-bottom: 20px;
           @media screen and (min-width:480px) {
             margin-top: 40px;
             margin-bottom: 40px;
@@ -299,6 +300,7 @@ li {
           }
           > p {
             font-size: 16px;
+            letter-spacing: 1px;
             color: $maintextcolor-gray;
           }
           > p:nth-child(2) {
@@ -331,23 +333,23 @@ li {
       margin-bottom: 50px;
     }
     &:before {
+      content: '';
       position: absolute;
       bottom: -15px;
       left: 44%;
       width: 0;
       height: 0;
-      content: '';
       border-width: 14px 12px 0 12px;
       border-style: solid;
       border-color: #000000 transparent transparent transparent;
     }
     &:after {
+      content: '';
       position: absolute;
       bottom: -12px;
       left: 44%;
       width: 0;
       height: 0;
-      content: '';
       border-width: 14px 12px 0 12px;
       border-style: solid;
       border-color: white transparent transparent transparent;
@@ -412,6 +414,7 @@ li {
           word-break: break-all;
           font-size: clamp(14px,2vw,18px);
           color: white;
+          letter-spacing: 1px;
           @media screen and (min-width:480px) {
             width: 80%;
             padding: 18px 0 18px 40px;
@@ -428,6 +431,7 @@ li {
           width: 90%;
           word-break: break-all;
           color: $maintextcolor-gray;
+          letter-spacing: 1px;
           @media screen and (min-width:480px) {
             width: 80%;
             padding: 18px 0 18px 40px;
@@ -450,6 +454,7 @@ li {
       color: #2E1409;
       font-size: clamp(24px,4vw,40px);
       font-weight: 600;
+      letter-spacing: 2px;
     }
     > p {
       text-align: center;
@@ -459,11 +464,11 @@ li {
   }
 
   .precautions {
-    padding: 20px 0 20px 0;
-    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px 0 20px 0;
+    margin-bottom: 30px;
     width: 100%;
     background-color: $color-base;
     @media screen and (min-width:480px) {
@@ -477,6 +482,7 @@ li {
       color: $maintextcolor-gray;
       text-align: left;
       line-height:clamp(24px,3vw,32px);
+      letter-spacing: 1px;
     }
   }
   .lovepiano-button {
