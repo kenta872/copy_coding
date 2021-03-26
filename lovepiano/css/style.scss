@@ -50,7 +50,7 @@ li {
   max-width: 1200px;
 }
 
-//lovepianoロゴ
+//lovepianoタイトル
 .lovepiano-title {
   display: flex;
   flex-direction: column;
@@ -62,12 +62,14 @@ li {
   >h2 {
     font-size: clamp(24px,4vw,40px);
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: #2E1409;
   }
   >p {
     font-size: clamp(12px,2vw,16px);
     color: $subtextcolor_gray;
+    font-weight: 500;
+    letter-spacing: 1px;
   }
 }
 
@@ -78,21 +80,24 @@ li {
   align-items: center;
   margin-bottom: 30px;
   padding-top: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   background-color: $color-base;
   @media screen and (min-width:480px) {
     margin-bottom: 60px;
     padding-top: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
   }
   > h3 {
     position: relative;
     margin-bottom: 40px;
     border-bottom: 2px solid #000000;
     font-size: clamp(16px,2vw,20px);
+    font-weight: 600;
+    letter-spacing: 1px;
     @media screen and (min-width:480px) {
       margin-bottom: 60px;
     }
+    //フロータイトル下線
     &:before {
       position: absolute;
       bottom: -15px;
@@ -105,12 +110,12 @@ li {
       border-color: #000000 transparent transparent transparent;
     }
     &:after {
-      content: '';
       position: absolute;
       bottom: -12px;
       left: 44%;
       width: 0;
       height: 0;
+      content: '';
       border-width: 14px 12px 0 12px;
       border-style: solid;
       border-color: $color-base transparent transparent transparent;
@@ -129,12 +134,10 @@ li {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 24px;
+      margin-bottom: 10px;
       list-style: none;
-      height: 60px;
       @media screen and (min-width:480px) {
-        height: 80px;
-        margin-bottom: 32px;
+        margin-bottom: 16px;
       }
       &:last-child {
         margin-bottom: 0;
@@ -142,16 +145,17 @@ li {
           display: none;
         }
       }
+      //三角矢印
       &:after {
         content: '';
         width: 0;
         height: 0;
-        margin-top: 6px;
+        margin-top: 10px;
         border-width: 12px 10px 0 10px;
         border-style: solid;
         border-color: $subtextcolor-gray transparent transparent transparent;
         @media screen and (min-width:480px) {
-          margin-top:8px;
+          margin-top: 16px;
           border-width: 14px 12px 0 12px;
         }
       }
@@ -159,22 +163,20 @@ li {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        height: 60px;
-        @media screen and (min-width:480px) {
-          height: 80px;
-        }
         .number {
           display: flex;
           justify-content: center;
           align-items: center;
           width: 16%;
           min-width: 60px;
-          height: 100%;
+          height: auto;
+          min-height: 60px;
           background-color: $color-accent;
           > p {
             margin: 0;
             padding: 0;
             font-size: 36px;
+            font-weight: 500;
             color: white;
             @media screen and (min-width:480px) {
               font-size: 48px;
@@ -185,13 +187,15 @@ li {
           display: flex;
           align-items:center;
           width: 84%;
-          height: 100%;
+          height: auto;
+          min-height: 60px;
           background-color: white;
           > p {
-            width: 90%;
+            width: 86%;
             margin-left: 20px;
-            font-size: clamp(12px,4vw,16px);
-            font-weight: normal;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: 500;
             >b:after {
               content:"\A";
               white-space: pre;
@@ -208,31 +212,23 @@ li {
       }
     }
   }
+  //設置に関するお願い
   .setting-condition {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    > #setting-condition-open {
+    > p {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 20px;
       font-size: 16px;
-      font-weight: bold;
+      font-weight: 600;
+      letter-spacing: 1px;
       color: $textcolor-red;
       @media screen and (min-width:480px) {
         margin-bottom: 40px;
-      }
-      @each $prefix in $set-prefix {
-        #{$prefix + "transition"}: 0.5s;
-      }
-      &:hover {
-        opacity: 0.8;
-        transform: translateY(4px);
-        @each $prefix in $set-prefix {
-          #{$prefix + "transition"}: 0.5s;
-        }
       }
       &:after {
         content: "";
@@ -247,48 +243,8 @@ li {
       }
     }
     .list-wrapper {
-      display: none;
       width: 90%;
       max-width: 800px;
-      .closebutton-wrapper {
-        display: flex;
-        justify-content: center;
-        > #setting-condition-close {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin-top: 20px;
-          margin-bottom: 20px;
-          font-size: 16px;
-          font-weight: bold;
-          color: $textcolor-red;
-          @media screen and (min-width:480px) {
-            margin-top: 40px;
-            margin-bottom: 40px;
-          }
-          @each $prefix in $set-prefix {
-            #{$prefix + "transition"}: 0.5s;
-          }
-          &:hover {
-            opacity: 0.8;
-            transform: translateY(-4px);
-            @each $prefix in $set-prefix {
-              #{$prefix + "transition"}: 0.5s;
-            }
-          }
-          &:before {
-            content: "";
-            display: block;
-            width: 8px;
-            height: 8px;
-            border-top: solid 2px $textcolor-red;
-            border-right: solid 2px $textcolor-red;
-            @each $prefix in $set-prefix {
-              #{$prefix + "transform"}: rotate(-45deg);
-            }
-          }
-        }
-      }
       > ul {
         > li {
           margin-bottom: 16px;
@@ -300,6 +256,7 @@ li {
           }
           > p {
             font-size: 16px;
+            font-weight: 500;
             letter-spacing: 1px;
             color: $maintextcolor-gray;
           }
@@ -328,6 +285,8 @@ li {
     position: relative;
     margin-bottom: 30px;
     font-size: clamp(16px,2vw,20px);
+    font-weight: 600;
+    letter-spacing: 1px;
     border-bottom: 2px solid #000000;
     @media screen and (min-width:480px) {
       margin-bottom: 50px;
@@ -413,8 +372,9 @@ li {
           width: 72%;
           word-break: break-all;
           font-size: clamp(14px,2vw,18px);
-          color: white;
+          font-weight: 500;
           letter-spacing: 1px;
+          color: white;
           @media screen and (min-width:480px) {
             width: 80%;
             padding: 18px 0 18px 40px;
@@ -428,10 +388,11 @@ li {
         > p {
           padding: 14px 0 14px 20px;
           font-size: clamp(14px,2vw,16px);
+          font-weight: 500;
+          letter-spacing: 1px;
           width: 90%;
           word-break: break-all;
           color: $maintextcolor-gray;
-          letter-spacing: 1px;
           @media screen and (min-width:480px) {
             width: 80%;
             padding: 18px 0 18px 40px;
@@ -454,12 +415,14 @@ li {
       color: #2E1409;
       font-size: clamp(24px,4vw,40px);
       font-weight: 600;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
     }
     > p {
       text-align: center;
       color: $subtextcolor-gray;
       font-size: clamp(12px,2vw,16px);
+      font-weight: 500;
+      letter-spacing: 1px;
     }
   }
 
@@ -467,9 +430,9 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     padding: 20px 0 20px 0;
     margin-bottom: 30px;
-    width: 100%;
     background-color: $color-base;
     @media screen and (min-width:480px) {
       padding: 40px 0 40px 0;
@@ -479,6 +442,7 @@ li {
       width: 90%;
       max-width: 800px;
       font-size: clamp(14px,2vw,16px);
+      font-weight: 500;
       color: $maintextcolor-gray;
       text-align: left;
       line-height:clamp(24px,3vw,32px);
