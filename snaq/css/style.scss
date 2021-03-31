@@ -1,0 +1,128 @@
+
+//reset.css
+body,html,main,h1,h2,h3,h4,p,label,ul,li {
+  margin: 0;
+  padding: 0;
+}
+li { list-style-type: none;}
+a { text-decoration: none;}
+
+
+//定義
+$main_color: #172852;
+$font-family: "Hiragino Kaku Gothic Pro", "Hiragino Kaku Gothic ProN", Meiryo, メイリオ, sans-serif;
+
+//仮設定
+img {
+  width: 100%;
+}
+
+//全体
+* { font-family: $font-family;}
+
+
+
+
+//Start ロゴ
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 300;
+  width: 60px;
+  height: 37.5px;
+  > a {
+    position: relative;
+    z-index: 200;
+    display: block;
+    height: 100%;
+    width: 100%;
+    > img {
+      position: absolute;
+      top: 0;
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+    > img:nth-child(1) {
+      left: 0;
+    }
+    > img:nth-child(2) {
+      right: 0;
+    }
+    > img:nth-child(3) {
+      right: 0;
+    }
+  }
+}
+//End ロゴ
+
+//Start ヘッダーメニュー
+.nav_wrapper {
+  position: absolute;
+  top: 26px;
+  right: 60px;
+  >nav {
+    >ul {
+      display: flex;
+      >li {
+        display: flex;
+        margin-right: 16px;
+        >a {
+          font-size: 13px;
+          font-weight: 600;
+          color: $main_color;
+        }
+      }
+    }
+  }
+}
+//End ヘッダーメニュー
+
+
+//Startトグル
+.toggle_wrapper {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 300;
+  padding: 16px;
+  background-color: white;
+  border-radius: 50%;
+}
+.nav_toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 16px;
+  height: 16px;
+  >span {
+    width: 100%;
+    height: 2px;
+    background-color: $main_color;
+  }
+}
+//End トグル
+
+//Start トグルメニュー
+.togglemenu_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.togglemenu_back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f4ece5;
+}
+.togglemenu {
+  position: relative;
+  margin: 0 auto;
+  padding: 100px 80px;
+}
+//End トグルメニュー
