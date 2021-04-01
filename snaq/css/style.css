@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body, html, main, h1, h2, h3, h4, p, label, ul, li {
+body, html, main, h1, h2, h3, h4, p, span, label, ul, li {
   margin: 0;
   padding: 0;
 }
@@ -20,16 +20,19 @@ img {
   font-family: "Hiragino Kaku Gothic Pro", "Hiragino Kaku Gothic ProN", Meiryo, メイリオ, sans-serif;
 }
 
-.logo {
+#logo {
   position: fixed;
   top: 20px;
   left: 20px;
   z-index: 300;
   width: 60px;
   height: 37.5px;
+  transition: 1.4s;
+  -moz-transition: 1.4s;
+  -webkit-transition: 1.4s;
 }
 
-.logo > a {
+#logo > a {
   position: relative;
   z-index: 200;
   display: block;
@@ -37,7 +40,7 @@ img {
   width: 100%;
 }
 
-.logo > a > img {
+#logo > a > img {
   position: absolute;
   top: 0;
   display: block;
@@ -45,16 +48,22 @@ img {
   width: auto;
 }
 
-.logo > a > img:nth-child(1) {
+#logo > a > img:nth-child(1) {
   left: 0;
 }
 
-.logo > a > img:nth-child(2) {
+#logo > a > img:nth-child(2) {
   right: 0;
 }
 
-.logo > a > img:nth-child(3) {
+#logo > a > img:nth-child(3) {
   right: 0;
+  width: 24%;
+}
+
+.logoop {
+  left: 40% !important;
+  animation: horizontal 1s ease-in-out 2 alternate;
 }
 
 .nav_wrapper {
@@ -102,25 +111,113 @@ img {
   background-color: #172852;
 }
 
-.togglemenu_wrapper {
+#togglemenu_wrapper {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.togglemenu_back {
-  position: fixed;
-  top: 0;
+  top: -100%;
   left: 0;
   height: 100%;
   width: 100%;
   background-color: #f4ece5;
+  transition: 1s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+}
+
+.open {
+  top: 0 !important;
+}
+
+.open .togglemenu {
+  left: 0;
+  opacity: 1;
 }
 
 .togglemenu {
   position: relative;
+  left: 30px;
   margin: 0 auto;
-  padding: 100px 80px;
+  padding: 100px 50px;
+  opacity: 0.2;
+  transition: 1.4s;
+  -moz-transition: 1.4s;
+  -webkit-transition: 1.4s;
+}
+
+.togglemenu > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.togglemenu > ul > li {
+  margin-bottom: 24px;
+}
+
+.togglemenu > ul > li > a > p {
+  font-size: 11px;
+  font-weight: 600;
+  color: #172852;
+}
+
+.togglemenu > ul > li > a > p > strong {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.togglemenu > ul > li:last-child {
+  margin-bottom: 0;
+}
+
+.mypage {
+  display: flex;
+  justify-content: center;
+  background-color: #e2cebc;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-radius: 16px;
+}
+
+.mypage > p {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #172852;
+}
+
+.mypage > p > span {
+  font-size: 18px;
+}
+
+.oyatucheck {
+  display: flex;
+  justify-content: center;
+  background-color: #d06d43;
+  padding: 10px 0;
+  border-radius: 16px;
+}
+
+.oyatucheck > p {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  color: white;
+}
+
+.oyatucheck > p > span {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+@keyframes horizontal {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: translateX(15deg);
+  }
 }

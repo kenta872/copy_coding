@@ -1,6 +1,6 @@
 
 //reset.css
-body,html,main,h1,h2,h3,h4,p,label,ul,li {
+body,html,main,h1,h2,h3,h4,p,span,label,ul,li {
   margin: 0;
   padding: 0;
 }
@@ -11,6 +11,7 @@ a { text-decoration: none;}
 //定義
 $main_color: #172852;
 $font-family: "Hiragino Kaku Gothic Pro", "Hiragino Kaku Gothic ProN", Meiryo, メイリオ, sans-serif;
+$set-prefix: ("","-moz-","-webkit-");
 
 //仮設定
 img {
@@ -24,13 +25,16 @@ img {
 
 
 //Start ロゴ
-.logo {
+#logo {
   position: fixed;
   top: 20px;
   left: 20px;
   z-index: 300;
   width: 60px;
   height: 37.5px;
+  @each $prefix in $set-prefix {
+    #{$prefix + "transition"}: 1.4s;
+  }
   > a {
     position: relative;
     z-index: 200;
@@ -52,8 +56,13 @@ img {
     }
     > img:nth-child(3) {
       right: 0;
+      width: 24%;
     }
   }
+}
+.logoop {
+  left: 40% !important;
+  animation: horizontal 1s ease-in-out 2 alternate;
 }
 //End ロゴ
 
@@ -105,24 +114,112 @@ img {
 //End トグル
 
 //Start トグルメニュー
-.togglemenu_wrapper {
+#togglemenu_wrapper {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-.togglemenu_back {
-  position: fixed;
-  top: 0;
+  top: -100%;
   left: 0;
   height: 100%;
   width: 100%;
   background-color: #f4ece5;
+  @each $prefix in $set-prefix {
+    #{$prefix + "transition"}: 1s;
+  }
 }
+  //オープン時
+  .open {
+    top: 0 !important;
+    .togglemenu {
+      left: 0;
+      opacity: 1;
+    }
+  }
+//.togglemenu_back {
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  height: 100%;
+//  width: 100%;
+//  background-color: #f4ece5;
+//}
 .togglemenu {
   position: relative;
+  left: 30px;
   margin: 0 auto;
-  padding: 100px 80px;
+  padding: 100px 50px;
+  opacity: 0.2;
+  @each $prefix in $set-prefix {
+    #{$prefix + "transition"}: 1.4s;
+  }
+  >ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    >li {
+      margin-bottom: 24px;
+      >a {
+        >p {
+          font-size: 11px;
+          font-weight: 600;
+          color: $main_color;
+          >strong {
+            font-size: 18px;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+    >li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.mypage {
+  display: flex;
+  justify-content: center;
+  background-color: #e2cebc;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-radius: 16px;
+  >p {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: $main_color;
+    >span {
+      font-size: 18px;
+    }
+  }
+}
+.oyatucheck {
+  display: flex;
+  justify-content: center;
+  background-color: #d06d43;
+  padding: 10px 0;
+  border-radius: 16px;
+  >p {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    color: white;
+    >span {
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+  }
 }
 //End トグルメニュー
+
+
+//Start ファーストビュー
+//End ファーストビュー
+
+
+
+//@keyframes identifier
+@keyframes horizontal {
+    0% { transform:rotate( 0deg); }
+   50% { transform:rotate( -15deg);}
+  100% { transform:translateX( 15deg); }
+}
