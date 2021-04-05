@@ -7,7 +7,7 @@
   });
 })(jQuery);
 
-var swiper = new Swiper('.slide1', {
+var swiper1 = new Swiper('.slide1', {
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
@@ -21,15 +21,33 @@ var swiper = new Swiper('.slide1', {
   speed: 1000,
 });
 
-var swiper = new Swiper('.slide2', {
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  speed: 1000,
+$(function() {
+    //swiper 980以下で起動
+    var swiper2;
+    $(window).on('load resize', function(){
+        var w = $(window).width();
+        if (w <= 980) {
+            if (swiper2) {
+                return;
+            } else {
+                swiper2 = new Swiper('.slide2', {
+                  pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                  },
+                  speed: 1000,
+                });
+            }
+        } else {
+            if (swiper2) {
+                swiper2.destroy();
+                swiper2 = undefined;
+            }
+        }
+    });
 });
 
-var swiper = new Swiper('.slide3', {
+var swiper3 = new Swiper('.slide3', {
   slidesPerView: 2,
   spaceBetween: 40,
   pagination: {
@@ -39,7 +57,7 @@ var swiper = new Swiper('.slide3', {
   speed: 1000,
 });
 
-var swiper = new Swiper('.slide4', {
+var swiper4 = new Swiper('.slide4', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
